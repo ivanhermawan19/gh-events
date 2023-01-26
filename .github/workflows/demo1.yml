@@ -1,8 +1,29 @@
 name: Deploy website
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      ref:
+        required: true
+        type: string
+      is_rfc:
+        default: false
+        type: boolean
+      config_test_ready:
+        default: false
+        type: boolean
+      service_name:
+        required: true
+        type: string
+      service_path:
+        default: .
+        type: string
+      program_lang:
+        required: true
+        type: string
+      environment:
+        type: string
+        description: environment to deploy to
+        required: true
 jobs:
   test:
     runs-on: ubuntu-latest
