@@ -31,7 +31,7 @@ jobs:
     environment: Staging
     env:
       test1: ${{ secrets.ADMIN_PASSWORD }}
-      test2: ini_bukan_rahasia
+      test2: ${{ vars.TOKEN}}
     steps:
       - name: Test env
         run: |
