@@ -5,6 +5,7 @@ inputs:
     type: string
     required: true
   test2:
+    type: string
     required: true
 
 runs:
