@@ -3,7 +3,6 @@ name: Print vars and secrets
 inputs:
   environment:
     type: string
-    description: environment to deploy to
     required: true
 
 runs:
@@ -11,7 +10,7 @@ runs:
   steps:
     - name: Print aja
       id: print_vars_secrets
-      environment: ${{ inputs.environment }}
+      environment: Staging
       env:
         test1: ${{ secrets.ADMIN_PASSWORD }}
         test2: ${{ vars.TOKEN}}
