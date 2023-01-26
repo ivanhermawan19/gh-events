@@ -1,0 +1,20 @@
+name: Print vars and secrets
+
+inputs:
+  environment:
+    type: string
+    description: environment to deploy to
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Print aja
+      id: print_vars_secrets
+      environment: ${{ inputs.environment }}
+      env:
+        test1: ${{ secrets.ADMIN_PASSWORD }}
+        test2: ${{ vars.TOKEN}}
+        run: |
+          echo "${{ env.test1 }}"
+          echo ini adalah $test2

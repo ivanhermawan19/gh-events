@@ -29,12 +29,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Staging
-    env:
-      test1: ${{ secrets.ADMIN_PASSWORD }}
-      test2: ${{ vars.TOKEN}}
-    steps:
-      - name: Test env
-        run: |
-          echo "${{ env.test1 }}"
-          echo ini adalah $test2
+    uses: ivanhermawan19/gh-events/printvar@main
+    with:
+      environment: ${{ inputs.environment }}
