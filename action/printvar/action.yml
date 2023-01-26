@@ -11,9 +11,7 @@ runs:
   using: composite
   steps:
     - name: Print aja
-      environment: Staging
       shell: bash
-      env:
       run: |
         echo "${{ inputs.test1 }}"
         echo ini adalah ${{ inputs.test2 }}"
