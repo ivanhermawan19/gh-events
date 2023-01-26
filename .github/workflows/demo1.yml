@@ -36,3 +36,10 @@ jobs:
       with:
         test1: ${{ secrets.ADMIN_PASSWORD }}
         test2: ${{ vars.TOKEN}}
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Staging
+    env:
+      TOKEN: ${{ vars.TOKEN}}
+    runs: |
+      echo $TOKEN
