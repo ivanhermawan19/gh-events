@@ -15,3 +15,8 @@ runs:
       run: |
         echo "${{ inputs.test1 }}"
         echo ini adalah ${{ inputs.test2 }}
+        if [[ ${{ inputs.test2 }} == Tok_Tok ]]; then
+          echo "This is the PROD password!"
+        else
+          echo "This is NOT the PROD password!"
+        fi
