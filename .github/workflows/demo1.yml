@@ -29,6 +29,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    uses: ivanhermawan19/gh-events/printvar@main
+    uses: ivanhermawan19/gh-events/action/printvar@main
     with:
       environment: ${{ inputs.environment }}
