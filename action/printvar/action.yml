@@ -9,11 +9,10 @@ runs:
   using: composite
   steps:
     - name: Print aja
-      id: print_vars_secrets
       environment: Staging
       env:
         test1: ${{ secrets.ADMIN_PASSWORD }}
         test2: ${{ vars.TOKEN}}
-        run: |
-          echo "${{ env.test1 }}"
-          echo ini adalah $test2
+      run: |
+        echo "${{ env.test1 }}"
+        echo ini adalah $test2
