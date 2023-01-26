@@ -35,4 +35,4 @@ jobs:
       - name: Test env
         run: |
           echo "${{ env.test1 }}"
-          echo $TOKEN
+          echo ini adalah $TOKEN
