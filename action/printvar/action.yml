@@ -14,4 +14,4 @@ runs:
       shell: bash
       run: |
         echo "${{ inputs.test1 }}"
-        echo ini adalah ${{ inputs.test2 }}"
+        echo ini adalah ${{ inputs.test2 }}
