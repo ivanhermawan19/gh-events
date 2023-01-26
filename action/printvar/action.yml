@@ -1,8 +1,10 @@
 name: Print vars and secrets
 
 inputs:
-  environment:
+  test1:
     type: string
+    required: true
+  test2:
     required: true
 
 runs:
@@ -12,8 +14,6 @@ runs:
       environment: Staging
       shell: bash
       env:
-        test1: ${{ secrets.ADMIN_PASSWORD }}
-        test2: ${{ vars.TOKEN}}
       run: |
-        echo "${{ env.test1 }}"
-        echo ini adalah $test2
+        echo "${{ inputs.test1 }}"
+        echo ini adalah ${{ inputs.test2 }}"

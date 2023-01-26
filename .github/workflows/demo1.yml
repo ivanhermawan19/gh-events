@@ -29,8 +29,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment}}
     steps:
     - name: gogo
       uses: ivanhermawan19/gh-events/action/printvar@main
       with:
-        environment: ${{ inputs.environment }}
+        test1: ${{ secrets.ADMIN_PASSWORD }}
+        test2: ${{ vars.TOKEN}}
