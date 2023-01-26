@@ -41,5 +41,7 @@ jobs:
     environment: Staging
     env:
       TOKEN: ${{ vars.TOKEN}}
-    runs: |
-      echo $TOKEN
+    steps:
+    - name: test
+      runs: |
+        echo $TOKEN
