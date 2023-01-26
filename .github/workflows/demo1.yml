@@ -38,9 +38,9 @@ jobs:
         test2: ${{ vars.TOKEN}}
   deploy:
     runs-on: ubuntu-latest
-    environment: Staging
+    # environment: Staging
     env:
-      TOKEN: ${{ vars.TOKEN}}
+      TOKEN: ${{ vars.IVAN_VAR}}
     steps:
     - name: test
       run: |
