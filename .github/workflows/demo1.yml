@@ -29,7 +29,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment}}
+    environment: Staging
     steps:
     - name: gogo
       uses: ivanhermawan19/gh-events/action/printvar@main
