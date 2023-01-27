@@ -25,6 +25,9 @@ on:
         type: string
         description: environment to deploy to
         required: true
+    secrets:
+      MY_SECRET: 
+        required: true
         
 jobs:
   build:
@@ -40,8 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     # environment: Staging
     env:
-      TOKEN: ${{ vars.IVAN_VAR}}
+      TOKEN: ${{ secrets.MY_SECRET}}
     steps:
     - name: test
       run: |
-        echo $TOKEN
+        echo print envs
+        env
